@@ -1,6 +1,6 @@
-import { providers, Contract, BigNumber } from "ethers";
+import { providers, Contract } from "ethers";
 import { abi, address } from "../blockchain/kLootContractABI";
-import { bkcTestnetInfo } from "../blockchain/provider";
+import { bkcTestnetInfo, bkcMainnetInfo } from "../blockchain/provider";
 import { ItemInfo, kLootInfo } from "../renderer/kLoot";
 
 const bkcTestnetProvider = new providers.JsonRpcProvider(bkcTestnetInfo.rpc, {

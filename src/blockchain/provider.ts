@@ -3,3 +3,9 @@ export const bkcTestnetInfo = {
   chainId: 25925,
   name: "Bitkub Chain - Testnet",
 };
+
+export const bkcMainnetInfo = {
+  rpc: "https://rpc.bitkubchain.io",
+  chainId: 96,
+  name: "BKC",
+};

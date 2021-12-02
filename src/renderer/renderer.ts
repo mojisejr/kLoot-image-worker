@@ -8,11 +8,11 @@ export async function renderKLoot(kLoot: kLootInfo) {
 
   const ctx = canvas.getContext("2d");
 
-  //1 draw background
-  // ctx.fillStyle = "black";
-  // ctx.fillRect(0, 0, width, height);
-  const bg = await loadImage("assets/bg.png");
-  ctx.drawImage(bg, 0, 0, width, height);
+  //draw background
+  ctx.fillStyle = "black";
+  ctx.fillRect(0, 0, width, height);
+  // const bg = await loadImage("assets/bg.png");
+  // ctx.drawImage(bg, 0, 0, width, height);
   const offset = 30;
   //item0
   renderText(kLoot.Nature1, ctx, width / 2, 40 + offset);
