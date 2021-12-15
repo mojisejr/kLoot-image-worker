@@ -81,6 +81,13 @@ export const abi = [
   },
   {
     type: "function",
+    stateMutability: "view",
+    outputs: [{ type: "bool", name: "", internalType: "bool" }],
+    name: "admin",
+    inputs: [{ type: "address", name: "", internalType: "address" }],
+  },
+  {
+    type: "function",
     stateMutability: "nonpayable",
     outputs: [],
     name: "approve",
@@ -109,6 +116,13 @@ export const abi = [
     outputs: [{ type: "address", name: "", internalType: "address" }],
     name: "getApproved",
     inputs: [{ type: "uint256", name: "tokenId", internalType: "uint256" }],
+  },
+  {
+    type: "function",
+    stateMutability: "view",
+    outputs: [{ type: "uint256", name: "", internalType: "uint256" }],
+    name: "getBalance",
+    inputs: [],
   },
   {
     type: "function",
@@ -212,6 +226,16 @@ export const abi = [
   },
   {
     type: "function",
+    stateMutability: "nonpayable",
+    outputs: [],
+    name: "lootKUB",
+    inputs: [
+      { type: "uint256", name: "amount", internalType: "uint256" },
+      { type: "address", name: "owner", internalType: "address" },
+    ],
+  },
+  {
+    type: "function",
     stateMutability: "view",
     outputs: [{ type: "string", name: "", internalType: "string" }],
     name: "name",
@@ -242,6 +266,27 @@ export const abi = [
     type: "function",
     stateMutability: "nonpayable",
     outputs: [],
+    name: "rescueERC20",
+    inputs: [
+      { type: "address", name: "token", internalType: "address" },
+      { type: "uint256", name: "amount", internalType: "uint256" },
+      { type: "address", name: "owner", internalType: "address" },
+    ],
+  },
+  {
+    type: "function",
+    stateMutability: "nonpayable",
+    outputs: [],
+    name: "rescueLoot",
+    inputs: [
+      { type: "uint256", name: "tokenId", internalType: "uint256" },
+      { type: "address", name: "owner", internalType: "address" },
+    ],
+  },
+  {
+    type: "function",
+    stateMutability: "nonpayable",
+    outputs: [],
     name: "safeTransferFrom",
     inputs: [
       { type: "address", name: "from", internalType: "address" },
@@ -260,6 +305,13 @@ export const abi = [
       { type: "uint256", name: "tokenId", internalType: "uint256" },
       { type: "bytes", name: "_data", internalType: "bytes" },
     ],
+  },
+  {
+    type: "function",
+    stateMutability: "nonpayable",
+    outputs: [],
+    name: "setAdmin",
+    inputs: [{ type: "address", name: "_addr", internalType: "address" }],
   },
   {
     type: "function",
@@ -345,9 +397,15 @@ export const abi = [
     type: "function",
     stateMutability: "nonpayable",
     outputs: [],
+    name: "unsetAdmin",
+    inputs: [{ type: "address", name: "_addr", internalType: "address" }],
+  },
+  {
+    type: "function",
+    stateMutability: "nonpayable",
+    outputs: [],
     name: "withdraw",
     inputs: [],
   },
 ];
-
-export const address: string = "0xe12F5bdc27634161cE872195bFaE9aaB40294b27";
+export const address: string = "0x9011b5276Df29Ba2B2Df5c9a57CeF44Ed127c0e1";

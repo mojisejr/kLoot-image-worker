@@ -1,14 +1,14 @@
 import { providers, Contract } from "ethers";
 import { abi, address } from "../blockchain/kLootContractABI";
-import { bkcTestnetInfo, bkcMainnetInfo } from "../blockchain/provider";
+import { bkcMainnetInfo } from "../blockchain/provider";
 import { ItemInfo, kLootInfo } from "../renderer/kLoot";
 
-const bkcTestnetProvider = new providers.JsonRpcProvider(bkcTestnetInfo.rpc, {
-  chainId: bkcTestnetInfo.chainId,
-  name: bkcTestnetInfo.name,
+const bkcMainnetProvider = new providers.JsonRpcProvider(bkcMainnetInfo.rpc, {
+  chainId: bkcMainnetInfo.chainId,
+  name: bkcMainnetInfo.name,
 });
 
-const contract = new Contract(address, abi, bkcTestnetProvider);
+const contract = new Contract(address, abi, bkcMainnetProvider);
 
 export async function getItemOfTokenByIndex(
   tokenId: string,
